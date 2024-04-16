@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Recipe page</title>
+    <style>
+        :root {
+            --Nutmeg: hsl(14, 45%, 36%);
+
+            --Dark: hsl(332, 51%, 32%);
+
+            --White: hsl(0, 0%, 100%);
+
+            --Rose-White: hsl(330, 100%, 98%);
+
+            --Eggshell: hsl(30, 54%, 90%);
+
+            --Light-Grey: hsl(30, 18%, 87%);
+            --Wenge-Brown: hsl(30, 10%, 34%);
+            --Dark-Charcoal: hsl(24, 5%, 18%);
+
+            --Font-paragraph: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: young;
+            src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: outfit;
+            src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+        }
+
+        body {
+            background-color: var(--Eggshell);
+            font-family: outfit, Arial, Helvetica, sans-serif;
+            font-size: var(--Font-paragraph);
+        }
+
+        main {
+            background-color: var(--White);
+            width: 80%;
+            margin: auto;
+            height: auto;
+
+        }
+
+        .image {
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .text h1 {
+            font-family: young, Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            margin: 25px 0;
+        }
+
+        .sect2 {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .text {
+            line-height: 25px;
+        }
+
+        .prep {
+            background-color: var(--Rose-White);
+            padding: 20px 40px;
+            margin: 30px 0;
+            line-height: 35px;
+            border-radius: 10px;
+        }
+
+        .prep h1,
+        .prep li::marker {
+            color: var(--Dark);
+            font-weight: 400;
+        }
+
+        .prep ul {
+            padding: 0 30px;
+        }
+
+        .ingre {
+            padding: 20px 0;
+            margin: 30px 0;
+            line-height: 35px;
+            border-bottom: 1px solid var(--Light-Grey);
+        }
+
+        .ingre h1,
+        .ingre li::marker {
+            margin: 25px 0;
+            color: var(--Nutmeg);
+            font-family: young, Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .ingre ul {
+            padding: 0 20px;
+
+        }
+
+        .ingre li {
+            padding: 0 20px;
+        }
+
+        .inst {
+            padding: 20px 0;
+            margin: 30px 0;
+            line-height: 30px;
+            border-bottom: 1px solid var(--Light-Grey);
+        }
+
+        .inst h1 {
+            margin: 25px 0;
+            color: var(--Nutmeg);
+            font-weight: 400;
+            font-family: young, Arial, Helvetica, sans-serif;
+
+        }
+
+        .inst li::marker {
+            color: var(--Nutmeg);
+            font-weight: 600;
+        }
+
+        .inst ol,
+        .inst li {
+            padding: 0 20px;
+        }
+
+        .nutrition {
+            margin: 30px 0;
+        }
+
+        .nutrition h1 {
+            font-family: young, Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            color: var(--Nutmeg);
+            margin: 25px 0;
+        }
+
+        table {
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        table tr :nth-of-type(even) {
+            color: var(--Nutmeg);
+            font-weight: bold;
+        }
+
+        table tr td {
+            padding: 10px;
+        }
+
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+        }
+
+        tbody tr:nth-child(-n+3) {
+            border-bottom: 1px solid var(--Light-Grey);
+        }
+
+        .attribution {
+            font-size: var(--Font-paragraph);
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        @media screen and (max-width:768px) {
+            .image {
+                width: 100%;
+                padding: 0;
+            }
+
+            main {
+                width: 100%;
+            }
+
+            img {
+                border-radius: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="sect1">
+            <div class="image">
+                <img src="/assets/images/image-omelette.jpeg" alt="">
+            </div>
+        </section>
+        <section class="sect2">
+            <div class="text">
+                <h1>
+                    Simple Omelette Recipe
+                </h1>
+                <p>
+                    An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
+                    to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+                </p>
+            </div>
+            <div class="prep">
+                <h2>
+                    Preparation time
+                </h2>
+                <ul>
+                    <li>
+                        &nbsp; &nbsp;<b>Total:</b> Approximately 10 minutes
+                    </li>
+                    <li>
+                        &nbsp; &nbsp;<b>Preparation:</b> 5 minutes
+                    </li>
+                    <li>
+                        &nbsp; &nbsp;<b>Cooking:</b> 5 minutes
+                    </li>
+                </ul>
+            </div>
+            <div class="ingre">
+                <h1>
+                    Ingredients
+                </h1>
+                <ul>
+                    <li>
+                        2-3 large eggs
+                    </li>
+                    <li>
+                        Salt, to taste
+                    </li>
+                    <li>
+                        Pepper, to taste
+                    </li>
+                    <li>
+                        1 tablespoon of butter or oil
+                    </li>
+                    <li>
+                        Optional fillings: cheese, diced vegetables, cooked meats, herbs
+                    </li>
+                </ul>
+            </div>
+            <div class="inst">
+                <h1>
+                    Instructions
+                </h1>
+                <ol>
+                    <li>
+                        <b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt and pepper until they are
+                        well mixed.
+                        You can add a tablespoon of water or milk for a fluffier texture.
+
+                    </li>
+                    <li>
+                        <b>Heat the pan:</b> Place a non-stick frying pan over medium heat and add butter or oil.
+
+                    </li>
+                    <li>
+                        <b>Cook the omelette:</b> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
+                        to ensure
+                        the eggs evenly coat the surface.
+
+                    </li>
+                    <li>
+                        <b>Add fillings (optional):</b> When the eggs begin to set at the edges but are still slightly
+                        runny in the
+                        middle, sprinkle your chosen fillings over one half of the omelette.
+
+                    </li>
+                    <li>
+                        <b>Fold and serve:</b> As the omelette continues to cook, carefully lift one edge and fold it
+                        over the
+                        fillings. Let it cook for another minute, then slide it onto a plate.
+
+                    </li>
+                    <li>
+
+                        <b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.
+                    </li>
+                </ol>
+            </div>
+            <div class="nutrition">
+                <h1>
+                    Nutrition
+                </h1>
+                <p>
+
+                    The table below shows nutritional values per serving without the additional fillings.
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Calories
+                            </td>
+                            <td>
+                                277kcal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Carbs
+                            </td>
+                            <td>
+                                0g
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Protein
+
+                            </td>
+                            <td>
+                                20g
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Fat
+
+                            </td>
+                            <td>
+                                22g
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="#">Arham Ali</a>.
+            </div>
+        </section>
+    </main>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAZiMmzMNnj_YqmPSE9dAAVtPuJFz-BmlE",
+          authDomain: "omelette-recipe.firebaseapp.com",
+          projectId: "omelette-recipe",
+          storageBucket: "omelette-recipe.appspot.com",
+          messagingSenderId: "601011455586",
+          appId: "1:601011455586:web:aa3f1d4b9007b41906f33b",
+          measurementId: "G-G1W17JE726"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+
+</html>
